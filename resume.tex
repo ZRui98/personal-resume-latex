@@ -1,0 +1,123 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+\documentclass[8pt, letterpaper]{article}
+\pagenumbering{gobble}
+\usepackage[T1]{fontenc}
+\usepackage[12pt]{moresize}
+\usepackage[utf8]{inputenc}
+\usepackage[top=0.22in,
+			left=0.3in,
+			right=0.3in,
+			bottom=0.22in]{geometry}
+\usepackage{enumitem}
+\usepackage{sectsty}
+\setlist[itemize]{nosep, before=\vspace{-0.5cm}}
+\sectionfont{\usefont{OT1}{lmss}{s}{n}
+  \sectionrule{0pt}{0pt}{-5pt}{1.3pt}
+}
+
+\newcommand{\Header}[2]{\begin{center}
+	\Huge\usefont{OT1}{lmss}{s}{n}
+		#1 \\
+	\small #2 \\
+	\normalsize \normalfont
+\end{center}}
+\newcommand{\SplitEntry}[2]{\textbf{\textit{#1}} & #2\\}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{\textbf{#1}}}}
+
+\newcommand{\DatedEntry}[5]{\large\textbf{#1}
+	\hfill #2\\\normalsize
+	\textit{#3}\hfill\textit{#4}\\\vspace{0.10cm}
+	#5
+}
+
+\newcommand{\ProjectEntry}[3]{\large\textbf{#1}
+	\normalsize\\ \textbf{#2}\\\vspace{0.1cm}
+	#3\vspace{0.12cm}
+}
+
+
+\begin{document}
+\usefont{OT1}{lmss}{m}{n}
+\Header{Rui Zhu}{ciguatera.z.rui@gmail.ca $|$ zrui.dev}
+
+
+\NewPart{Skills}{}
+\begin{tabular}{r|l}
+	\SplitEntry{Languages}{Java, JavaScript, Python, Kotlin, TypeScript, Bash, SQL, Golang, Redis}
+	\SplitEntry{Frameworks}{Spring Boot, React/Redux, VueJS/Vuex, NodeJS, Spring, JUnit, Jest, Wiremock, JQuery}
+	\SplitEntry{Tools}{git, docker, SVN, nix}
+\end{tabular}
+
+
+\NewPart{Work Experience}{}
+\DatedEntry{Software Engineer Intern}
+{May 2020 -- Aug 2020}
+{Capital One}
+{Toronto, ON}
+{\begin{itemize}[nolistsep]
+	\item Implemented new features in VueJS/Vuex front end for service agents 
+	\item Performed Accessibility testing on web application, and documented/fixed issues
+	\item Created new endpoints in RESTful NodeJS APIs that were consumed by front end
+	\item Wrote meaningful Unit Tests with Mocha and Jest, maintaining 100\% code coverage
+\end{itemize}}
+\DatedEntry{Software Engineer Intern}
+{May 2019 -- Aug 2019}
+{Capital One}
+{Toronto, ON}
+{\begin{itemize}[nolistsep]
+	\item Upgraded RESTful API from Spring 4 to Spring Boot 2, improving code maintainablility and currency
+	\item Added performance increasing modifications to object pooling for encryption/decryption classes
+	\item Created unit and integration tests using Wiremock, H2 DB, and Mockito, getting 100\% code coverage
+	\item Maintained existing tools like ATDD test suite with Cucumber
+\end{itemize}}
+\DatedEntry{Front End Developer Intern}
+{Sept 2018 -- Dec 2018}
+{Ross Video}
+{Ottawa, ON}
+{\begin{itemize}[nolistsep]
+	\item Worked on SaaS webapp servicing major news stations/arenas in North America
+	\item Implement new features in Javascript/Jquery application such as video players and login groups
+	\item Added UX features for touchpad devices
+\end{itemize}}
+\DatedEntry{Software Test Engineer Intern}
+{May 2018 -- Aug 2018}
+{Gemalto}
+{Ottawa, ON}
+{\begin{itemize}[nolistsep]
+	\item Wrote performance testing scripts using python and java to automate retrieval of data (xml, csv)
+	\item Used SQLAlchemy ORM to efficiently query and filter from data set with 20,000+ rows
+	\item Created a web app using JQuery to run and display comparisons between data sets, improving usability
+\end{itemize}}
+\DatedEntry{Teaching Assistant}
+{Sept 2017 -- Dec 2019}
+{Carleton University}
+{Ottawa, ON}
+{\begin{itemize}[nolistsep]
+	\item Helped students understand bugs with their code by running through their code with them
+	\item Explained to students various design patterns and data structures/algorithms  in Java/Python
+\end{itemize}}
+
+\NewPart{Projects}{}
+\ProjectEntry{kimosabe}
+{Spring Boot, React/Redux, PostgreSQL, Redis/RediSearch}
+{\begin{itemize}
+	\item Social application for finding buddies to play games with, similar to forum style
+	\item Uses IGDB API cached in Redis, and RediSearch for searching for games
+	\item Ability for users to join/create/moderate groups, add friends, post in subgroups.
+\end{itemize}}
+\ProjectEntry{fserv}
+{Golang, PostgreSQL}
+{\begin{itemize}
+	\item Go app w/ imgur style file name shortening used for self hosting images/files
+	\item Serves simple, light HTML website with JWT Authentication
+\end{itemize}}
+
+\NewPart{Education}{}
+\DatedEntry{Carleton University}
+{Sept 2016 -- Dec 2020}
+{B. Computer Science, 10.7/12 CGPA (3.8/4.0)}
+{Ottawa, ON}
+\end{document}
+
