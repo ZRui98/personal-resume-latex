@@ -1,6 +1,6 @@
 % !TEX TS-program = xelatex
 % !TEX encoding = UTF-8 Unicode
-\documentclass[8pt, letterpaper]{article}
+\documentclass[letterpaper]{article}
 \pagenumbering{gobble}
 \usepackage[T1]{fontenc}
 \usepackage[12pt]{moresize}
@@ -8,16 +8,16 @@
 \usepackage[top=0.22in,
 			left=0.3in,
 			right=0.3in,
-			bottom=0.22in]{geometry}
+			bottom=0.1in]{geometry}
 \usepackage{enumitem}
 \usepackage{sectsty}
 \setlist[itemize]{nosep, before=\vspace{-0.5cm}}
-\sectionfont{\usefont{OT1}{lmss}{s}{n}
+\sectionfont{\usefont{OT1}{lmss}{m}{n}
   \sectionrule{0pt}{0pt}{-5pt}{1.3pt}
 }
 
 \newcommand{\Header}[2]{\begin{center}
-	\Huge\usefont{OT1}{lmss}{s}{n}
+	\Huge\usefont{OT1}{lmss}{m}{n}
 		#1 \\
 	\small #2 \\
 	\normalsize \normalfont
@@ -34,14 +34,13 @@
 
 \newcommand{\ProjectEntry}[3]{\large\textbf{#1}
 	\normalsize\\ \textbf{#2}\\\vspace{0.1cm}
-	#3\vspace{0.12cm}
+	#3\vspace{0.10cm}
 }
 
 
 \begin{document}
 \usefont{OT1}{lmss}{m}{n}
 \Header{Rui Zhu}{ciguatera.z.rui@gmail.ca $|$ zrui.dev}
-
 
 \NewPart{Skills}{}
 \begin{tabular}{r|l}
@@ -50,8 +49,18 @@
 	\SplitEntry{Tools}{git, docker, Maven, SVN, nix}
 \end{tabular}
 
-
 \NewPart{Work Experience}{}
+\DatedEntry{Associate Software Engineer}
+{Jan 2021 -- Present}
+{Capital One}
+{Toronto, ON}
+{\begin{itemize}[nolistsep]
+	\item Added new features to Gatsby/React capitalone.ca website
+	\item Performed A/B tests to obtain data for analytics teams
+	\item Managed AWS Infrastructure using terraform
+	\item Maintained Jenkins pipeline for infrastructure updates
+	\item Wrote cypress, rtl, and enzyme tests, maintaining 100\% code coverage
+\end{itemize}}
 \DatedEntry{Software Engineer Intern}
 {May 2020 -- Aug 2020}
 {Capital One}
@@ -89,14 +98,6 @@
 	\item Wrote performance testing scripts using python and java to automate retrieval of data (xml, csv)
 	\item Used SQLAlchemy ORM to efficiently query and filter from data set with 20,000+ rows
 	\item Created a web app using JQuery to run and display comparisons between data sets, improving usability
-\end{itemize}}
-\DatedEntry{Teaching Assistant}
-{Sept 2017 -- Dec 2019}
-{Carleton University}
-{Ottawa, ON}
-{\begin{itemize}[nolistsep]
-	\item Helped students understand bugs with their code by running through their code with them
-	\item Explained to students various design patterns and data structures/algorithms  in Java/Python
 \end{itemize}}
 
 \NewPart{Projects}{}
