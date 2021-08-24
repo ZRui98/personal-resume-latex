@@ -17,37 +17,37 @@
 }
 
 \newcommand{\Header}[2]{\begin{center}
-	\Huge\usefont{OT1}{lmss}{m}{n}
+	\huge\usefont{OT1}{lmss}{m}{n}
 		#1 \\
-	\small #2 \\
-	\normalsize \normalfont
+	\small #2
 \end{center}}
 \newcommand{\SplitEntry}[2]{\textbf{\textit{#1}} & #2\\}
 
-\newcommand{\NewPart}[1]{\section*{\uppercase{\textbf{#1}}}}
+\newcommand{\NewPart}[1]{\section*{\uppercase{\large\textbf{#1}}}}
 
 \newcommand{\DatedEntry}[5]{\large\textbf{#1}
-	\hfill #2\\\normalsize
+	\hfill \small#2\\
 	\textit{#3}\hfill\textit{#4}\\\vspace{0.10cm}
-	#5
+	#5\vspace{0.1cm}
 }
 
 \newcommand{\ProjectEntry}[3]{\large\textbf{#1}
-	\normalsize\\ \textbf{#2}\\\vspace{0.1cm}
-	#3\vspace{0.10cm}
+	\hfill \small{#2}\\
+	#3\vspace{0.1cm}
 }
+
 
 
 \begin{document}
 \usefont{OT1}{lmss}{m}{n}
-\Header{Rui Zhu}{ciguatera.z.rui@gmail.ca $|$ zrui.dev}
+\Header{Rui Zhu}{github.com/zrui98 $|$ zrui.dev $|$ ciguatera.z.rui@gmail.ca}\vspace{-0.5cm}
 
 \NewPart{Skills}{}
 \begin{tabular}{r|l}
-	\SplitEntry{Languages}{Java, JavaScript, Python, Kotlin, TypeScript, Bash, SQL, Golang, Redis}
-	\SplitEntry{Frameworks}{Spring Boot, React/Redux, VueJS/Vuex, NodeJS, Spring, JUnit, Jest, Wiremock, JQuery}
-	\SplitEntry{Tools}{git, docker, Maven, SVN, nix, AWS}
-\end{tabular}
+	\SplitEntry{Languages}{Java, JavaScript, Kotlin, Typescript, Python, Bash, SQL, Golang, Redis}
+	\SplitEntry{Frameworks}{Spring Boot, Micronaut, React/Redux, Svelte, VueJS/Vuex, NodeJS, Spring, JUnit, Jest, JQuery}
+	\SplitEntry{Tools}{git, docker, maven, nix, aws}
+\end{tabular}\vspace{-0.2cm}
 
 \NewPart{Work Experience}{}
 \DatedEntry{Associate Software Engineer}
@@ -55,31 +55,30 @@
 {Capital One}
 {Toronto, ON}
 {\begin{itemize}[nolistsep]
-	\item Managed AWS Infrastructure using terraform
-	\item Implemented new features in React/Gatsby site servicing up to 10000 unique visitors a week
-	\item Wrote cypress, rtl, and enzyme tests, maintaining 100\% code coverage
-	\item Worked in scrum team performing spikes on release strategies and infrastructure decisions
+	\item Implemented new features/content in Gatsby React site servicing 15000\texttt{+} unique visitors/week
+	\item Used aws IaC with terraform to manage security groups and IAM roles and deploy infra changes
+	\item Wrote cypress, rtl, and enzyme tests, while maintaining 100\% code coverage
+	\item Implemented new internal dev environment using golang lambda and s3
+	\item Worked in scrum team utilizing mob/pair programming to effectively complete large tasks
+	\item Integrated live API data into website, removing dependency on hardcoded data
 \end{itemize}}
 \DatedEntry{Software Engineer Intern}
 {May 2020 -- Aug 2020}
 {Capital One}
 {Toronto, ON}
 {\begin{itemize}[nolistsep]
-	\item Implemented new user workflows in VueJS/Vuex SPA
+	\item Implemented new user workflows in VueJS/Vuex SPA used by customer agents
+	\item Created new endpoints and business logic in RESTful NodeJS APIs that were consumed by front end
 	\item Performed Accessibility testing on web application, and documented/fixed issues
-	\item Created new endpoints in RESTful NodeJS APIs that were consumed by front end
-	\item Worked in scrum team implementing new features in application used by customer agents
 \end{itemize}}
 \DatedEntry{Software Engineer Intern}
 {May 2019 -- Aug 2019}
 {Capital One}
 {Toronto, ON}
 {\begin{itemize}[nolistsep]
-	\item Upgraded RESTful API from Spring 4 to Spring Boot 2, improving code maintainablility and currency
+	\item Upgraded RESTful API from Spring 4 to Spring Boot 2, improving code maintainablility and security
 	\item Added performance increasing modifications to object pooling for encryption/decryption classes
 	\item Created unit and integration tests using Wiremock, H2 DB, and Mockito, getting 100\% code coverage
-	\item Maintained existing tools like ATDD test suite with Cucumber
-	\item Wrote meaningful Unit Tests with Mocha and Jest, maintaining 100\% code coverage
 \end{itemize}}
 \DatedEntry{Front End Developer Intern}
 {Sept 2018 -- Dec 2018}
@@ -88,7 +87,7 @@
 {\begin{itemize}[nolistsep]
 	\item Worked on SaaS webapp servicing major news stations/stadiums in North America
 	\item Implemented new features in Javascript/Jquery application such as video players and login groups
-	\item Added UX features for touchpad devices
+	\item Added UX improvements for touchpad devices
 \end{itemize}}
 \DatedEntry{Software Test Engineer Intern}
 {May 2018 -- Aug 2018}
@@ -96,31 +95,42 @@
 {Ottawa, ON}
 {\begin{itemize}[nolistsep]
 	\item Wrote performance testing scripts using python and java to automate retrieval of data (xml, csv)
-	\item Used SQLAlchemy ORM to efficiently query and filter from data set with 20,000+ rows
+	\item Used SQLAlchemy ORM to efficiently query and filter from data set with 20,000\texttt{+} rows
 	\item Created a web app using JQuery to run and display comparisons between data sets, improving usability
-\end{itemize}}
+\end{itemize}}\vspace{-0.3cm}
 
 \NewPart{Projects}{}
+\ProjectEntry{Valhalla Rising}
+{Micronaut\texttt{+}Kotlin, Svelte\texttt{+}Typescript, PostgreSQL}
+{
+	turn based websocket game (2-4 players) with matchmaking.\\
+	\begin{itemize}
+		\item Has JWT authenticated RESTful API for account/game management.
+		\item Designed with async and parallel requests in mind
+	\end{itemize}
+}
 \ProjectEntry{kimosabe}
-{Spring Boot, React/Redux, PostgreSQL, Redis/RediSearch}
-{\begin{itemize}
-	\item Created Social application for finding buddies to play games with, similar to a forum
-	\item Used IGDB API cached in Redis and RediSearch for searching of games
-	\item Implemented features in Spring Boot API and React Front end
-	\item Orchestrated test pipeline using drone CI/CD
-\end{itemize}}
+{Spring Boot, React, PostgreSQL, Redis}
+{Social application for finding buddies to play games with\\
+	\begin{itemize}
+		\item Used IGDB API cached in Redis and RediSearch for searching of games
+		\item Implemented features in Spring Boot API and React Front end
+		\item Orchestrated test pipeline using drone CI/CD
+	\end{itemize}
+}
 \ProjectEntry{fserv}
 {Golang, PostgreSQL}
-{\begin{itemize}
-	\item Created Go app w/ imgur style file name shortening used for self hosting images/files
+{File server w/ imgur style file name shortening used for self hosting images/files\\\begin{itemize}
 	\item Wrote web server that served simple, light HTML website with JWT Authentication
-	\item Added features for account management and sharable files
-\end{itemize}}
+	\item Added features for account management and private files
+\end{itemize}}\vspace{-0.3cm}
 
 \NewPart{Education}{}
 \DatedEntry{Carleton University}
 {Sept 2016 -- Dec 2020}
-{B. Computer Science, 10.7/12 CGPA (3.8/4.0)}
+{Bachelors Computer Science, 10.7/12 CGPA (3.8/4.0)}
 {Ottawa, ON}
+{\begin{itemize}
+	\item TA for Data structures class, mentoring 100\texttt{+} students.
+\end{itemize}}
 \end{document}
-
