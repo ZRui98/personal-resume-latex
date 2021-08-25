@@ -16,27 +16,24 @@
   \sectionrule{0pt}{0pt}{-5pt}{1.3pt}
 }
 
+
 \newcommand{\Header}[2]{\begin{center}
 	\huge\usefont{OT1}{lmss}{m}{n}
 		#1 \\
 	\small #2
 \end{center}}
-\newcommand{\SplitEntry}[2]{\textbf{\textit{#1}} & #2\\}
-
+\newcommand{\SplitEntry}[2]{\textbf{\textit{#1}} & \small#2\\}
 \newcommand{\NewPart}[1]{\section*{\uppercase{\large\textbf{#1}}}}
-
-\newcommand{\DatedEntry}[5]{\large\textbf{#1}
+\newcommand{\DatedEntry}[5]{\textbf{#1}
 	\hfill \small#2\\
 	\textit{#3}\hfill\textit{#4}\\\vspace{0.1cm}
 	#5\vspace{0.1cm}
 }
-
-\newcommand{\ProjectEntry}[4]{\large\textbf{#1}
+\newcommand{\ProjectEntry}[4]{\textbf{#1}
 	\hfill \small{#2}\\
 	#3\\\vspace{0.1cm}
 	#4\vspace{0.1cm}
 }
-
 
 
 \begin{document}
@@ -45,7 +42,7 @@
 
 \NewPart{Skills}{}
 \begin{tabular}{r|l}
-	\SplitEntry{Languages}{Java, JavaScript, Kotlin, Typescript, Python, Bash, SQL, Golang, Redis}
+	\SplitEntry{Languages}{Java, JavaScript, Kotlin, Typescript, Python, Bash, Golang, SQL, Redis}
 	\SplitEntry{Frameworks}{Spring Boot, Micronaut, React/Redux, Svelte, VueJS/Vuex, NodeJS, Spring, JUnit, Jest, JQuery}
 	\SplitEntry{Tools}{git, docker, maven, nix, aws}
 \end{tabular}\vspace{-0.2cm}
@@ -106,7 +103,7 @@
 {turn based websocket game (2-4 players) with matchmaking.}
 {\begin{itemize}
 	\item Has JWT authenticated RESTful API for account/game management.
-	\item Designed with async and parallel requests in mind
+	\item Designed with async and parallel requests in mind for scalability
 \end{itemize}}
 \ProjectEntry{kimosabe}
 {Spring Boot, React, PostgreSQL, Redis}
