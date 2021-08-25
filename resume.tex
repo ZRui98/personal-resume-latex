@@ -27,13 +27,14 @@
 
 \newcommand{\DatedEntry}[5]{\large\textbf{#1}
 	\hfill \small#2\\
-	\textit{#3}\hfill\textit{#4}\\\vspace{0.10cm}
+	\textit{#3}\hfill\textit{#4}\\\vspace{0.1cm}
 	#5\vspace{0.1cm}
 }
 
-\newcommand{\ProjectEntry}[3]{\large\textbf{#1}
+\newcommand{\ProjectEntry}[4]{\large\textbf{#1}
 	\hfill \small{#2}\\
-	#3\vspace{0.1cm}
+	#3\\\vspace{0.1cm}
+	#4\vspace{0.1cm}
 }
 
 
@@ -102,25 +103,23 @@
 \NewPart{Projects}{}
 \ProjectEntry{Valhalla Rising}
 {Micronaut\texttt{+}Kotlin, Svelte\texttt{+}Typescript, PostgreSQL}
-{
-	turn based websocket game (2-4 players) with matchmaking.\\
-	\begin{itemize}
-		\item Has JWT authenticated RESTful API for account/game management.
-		\item Designed with async and parallel requests in mind
-	\end{itemize}
-}
+{turn based websocket game (2-4 players) with matchmaking.}
+{\begin{itemize}
+	\item Has JWT authenticated RESTful API for account/game management.
+	\item Designed with async and parallel requests in mind
+\end{itemize}}
 \ProjectEntry{kimosabe}
 {Spring Boot, React, PostgreSQL, Redis}
-{Social application for finding buddies to play games with\\
-	\begin{itemize}
-		\item Used IGDB API cached in Redis and RediSearch for searching of games
-		\item Implemented features in Spring Boot API and React Front end
-		\item Orchestrated test pipeline using drone CI/CD
-	\end{itemize}
-}
+{Social application for finding buddies to play games with}
+{\begin{itemize}
+	\item Used IGDB API cached in Redis and RediSearch for searching of games
+	\item Implemented features in Spring Boot API and React Front end
+	\item Orchestrated test pipeline using drone CI/CD
+\end{itemize}}
 \ProjectEntry{fserv}
 {Golang, PostgreSQL}
-{File server w/ imgur style file name shortening used for self hosting images/files\\\begin{itemize}
+{File server w/ imgur style file name shortening used for self hosting images/files}
+{\begin{itemize}
 	\item Wrote web server that served simple, light HTML website with JWT Authentication
 	\item Added features for account management and private files
 \end{itemize}}\vspace{-0.3cm}
