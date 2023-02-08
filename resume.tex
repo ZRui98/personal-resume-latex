@@ -1,8 +1,12 @@
 % !TEX TS-program = xelatex
 % !TEX encoding = UTF-8 Unicode
+% !TEX root = resume.tex
+%&pdflatex
 \documentclass[letterpaper]{article}
 \pagenumbering{gobble}
 \usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
 \usepackage[12pt]{moresize}
 \usepackage[utf8]{inputenc}
 \usepackage[top=0.22in,
@@ -20,12 +24,12 @@
 \newcommand{\Header}[2]{\begin{center}
 	\huge\usefont{OT1}{lmss}{m}{n}
 		#1 \\
-	\small #2
+	\small{#2}
 \end{center}}
-\newcommand{\SplitEntry}[2]{\textbf{\textit{#1}} & \small#2\\}
-\newcommand{\NewPart}[1]{\section*{\uppercase{\large\textbf{#1}}}}
-\newcommand{\DatedEntry}[5]{\textbf{#1}
-	\hfill \small#2\\
+\newcommand{\SplitEntry}[2]{\textbf{\textit{#1}} & \small{#2}\\}
+\newcommand{\NewPart}[1]{\section*{\large\uppercase{\textbf{#1}}}}
+\newcommand{\DatedEntry}[5]{\small\textbf{#1}
+	\hfill \small{#2}\\
 	\textit{#3}\hfill\textit{#4}\\\vspace{0.1cm}
 	#5\vspace{0.1cm}
 }
@@ -38,26 +42,37 @@
 
 \begin{document}
 \usefont{OT1}{lmss}{m}{n}
-\Header{Rui Zhu}{github.com/zrui98 $|$ zrui.dev $|$ ciguatera.z.rui@gmail.ca}\vspace{-0.5cm}
+\Header{Rui Zhu}{\url{github.com/zrui98} $|$ \url{zrui.dev} $|$ \url{ciguatera.z.rui@gmail.ca}}\vspace{-0.5cm}
 
-\NewPart{Skills}{}
+\NewPart{Skills}
 \begin{tabular}{r|l}
 	\SplitEntry{Languages}{Java, JavaScript, Kotlin, Typescript, Python, Bash, Golang, SQL, Redis}
 	\SplitEntry{Frameworks}{Spring Boot, Micronaut, React/Redux, Svelte, VueJS/Vuex, NodeJS, Spring, JUnit, Jest, JQuery}
 	\SplitEntry{Tools}{git, docker, maven, nix, aws}
 \end{tabular}\vspace{-0.2cm}
 
-\NewPart{Work Experience}{}
+\NewPart{Work Experience}
+\DatedEntry{Jr Software Developer}
+{May 2022 -- Present}
+{Deliverr (Acquired by Shopify)}
+{Remote}
+{\begin{itemize}[nolistsep]
+	\item Wrote design docs for API and database changes, while helping estimate and create tasks for work
+	\item Created datadog dashboards/alerts to monitor systems, which lowered FRT from 1\texttt{+} days to minutes
+	\item Maintained serverless ecosystem of typescript lambdas interacting with S3, SQS, Cognito Userpool
+	\item Wrote design docs for API and database changes, while helping estimate and create tasks for upcoming work
+	\item Worked on integration tasks post acquisition to bring Shopify customers onto Deliverr
+	\item Helped with onboarding of new team mates to tech stack
+\end{itemize}}
 \DatedEntry{Associate Software Engineer}
-{Jan 2021 -- Present}
+{Jan 2021 -- April 2022}
 {Capital One}
 {Toronto, ON}
 {\begin{itemize}[nolistsep]
-	\item Implemented new content and figma designs in Gatsby React site servicing 15000\texttt{+} unique visitors/week
-	\item Participated in the design and development of lambda NodeJS REST API's for CRUD operations on business logic
+	\item Implemented new content/components for Gatsby React site servicing 15000\texttt{+} unique visitors/week
 	\item Used terraform to manage security groups and IAM roles
 	\item Wrote cypress, rtl, and enzyme tests while maintaining 100\% code coverage
-	\item Implemented new internal dev environment using golang lambda as file server to serve content from s3
+	\item Created new internal dev environment using golang lambda as file server to serve content from s3
 	\item Integrated live API data into site, improving response time of product changes by 30 minutes
 	\item Participated in agile development practices to effectively manage tasks 
 	\item Optimized AWS cloudfront infrastructure to increase resiliency through cloudfront origin failover
@@ -99,16 +114,9 @@
 	\item Created a web app using JQuery to run and display comparisons between data sets, improving usability
 \end{itemize}}\vspace{-0.3cm}
 
-\NewPart{Projects}{}
-\ProjectEntry{Valhalla Falling}
-{Micronaut\texttt{+}Kotlin, Svelte\texttt{+}Typescript, PostgreSQL}
-{turn based websocket game (2-4 players) with matchmaking.}
-{\begin{itemize}
-	\item Has JWT authenticated RESTful API for account/game management.
-	\item Designed with async and parallel requests in mind for scalability
-\end{itemize}}
+\NewPart{Projects}
 \ProjectEntry{kimosabe}
-{Spring Boot, React, PostgreSQL, Redis}
+{Spring Boot, React, Postgres, Redis}
 {Social application for finding buddies to play games with}
 {\begin{itemize}
 	\item Used IGDB API cached in Redis and RediSearch for searching of games
@@ -117,14 +125,14 @@
 	\item DB Migrations through flyway
 \end{itemize}}
 \ProjectEntry{fserv}
-{Golang, PostgreSQL}
+{Golang, Postgres}
 {File server w/ imgur style file name shortening used for self hosting images/files}
 {\begin{itemize}
 	\item Wrote web server that served simple, light HTML website with JWT Authentication
 	\item Added features for account management and private files
 \end{itemize}}\vspace{-0.3cm}
 
-\NewPart{Education}{}
+\NewPart{Education}
 \DatedEntry{Carleton University}
 {Sept 2016 -- Dec 2020}
 {Bachelors Computer Science, 10.7/12 CGPA (3.8/4.0)}
