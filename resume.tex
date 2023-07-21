@@ -45,34 +45,35 @@
 
 \NewPart{Skills}
 \begin{tabular}{r|l}
-	\SplitEntry{Languages}{Java, JavaScript, Kotlin, Typescript, Python, Bash, Golang, SQL, Redis}
-	\SplitEntry{Frameworks}{Spring Boot, Micronaut, React/Redux, Svelte, VueJS/Vuex, NodeJS, JUnit, Jest, JQuery}
+	\SplitEntry{Languages}{Typescript, JavaScript, Java, Kotlin, Python, Bash, Golang, SQL, Redis}
+	\SplitEntry{Frameworks}{Serverless, Spring Boot, Micronaut, React/Redux, Svelte, VueJS/Vuex, NodeJS, JUnit, Jest, JQuery}
 	\SplitEntry{Tools}{aws, git, docker, maven, nix}
 \end{tabular}\vspace{-0.2cm}
 
 \NewPart{Work Experience}
 \DatedEntry{Jr Backend Developer}
 {May 2022 -- Present}
-{Deliverr (Acquired by Shopify)}
+{Deliverr (Acquired by Flexport)}
 {Remote}
 {\begin{itemize}[nolistsep]
-	\item Wrote design docs for new features designed with resiliency and fault tolerance in mind
-	\item Created datadog dashboards/alerts to monitor systems, which lowered FRT from 1\texttt{+} days to minutes
-	\item Contributed to a serverless ecosystem of typescript lambdas interacting with S3/SQS/Redis/Cognito/SSM/IAM
+	\item Managed invoicing with Chargebee, billing over 100000\texttt{+} events per week from custom billing logic
+	\item Integrated payment gateways like Stripe, Plaid, Braintree servicing 10000\texttt{+} customers, collecting 100M\texttt{+} in revenue
+	\item Created datadog dashboards/alerts to monitor systems, lowering FRT from 1\texttt{+} days to minutes
+	\item Designed lambdas providing new business features handling over 2M events per week
+	\item Shipped code independantly to a serverless ecosystem of typescript lambdas interacting with S3/SQS/Redis/SSM
 	\item Debugged critical systems using different logging tools such as datadog, cloudwatch
-	\item Completed daily tasks such as code reviews, standups, and various agile meetings
-	\item Helped with onboarding of new team mates to tech stack
-	\item Used IaC tools like Terraform and serverless to manage infrastructure through CI/CD
+	\item Used IaC tools like Terraform and serverless through CI/CD, achieving easier deployments with better safeguards
+	\item Participated in code reviews, standups, various agile meetings, and other team rituals
 \end{itemize}}
 \DatedEntry{Associate Software Engineer}
 {Jan 2021 -- April 2022}
 {Capital One}
 {Toronto, ON}
 {\begin{itemize}[nolistsep]
-	\item Implemented new content/components for Gatsby React site servicing 15000\texttt{+} unique visitors/week
-	\item Used terraform to manage security groups and IAM roles
+	\item Implemented new content/components for Gatsby React site servicing 75000\texttt{+} unique visitors/week
+	\item Ran A/B tests and tracked data from 5000\texttt{+} experiment interactions per day.
 	\item Wrote cypress, rtl, and enzyme tests while maintaining 100\% code coverage
-	\item Created new internal dev environment using golang lambda as file server to serve content from s3
+	\item Used terraform to manage security groups and IAM roles
 	\item Integrated live API data into site, improving response time of product changes by 30 minutes
 	\item Participated in agile development practices to effectively manage tasks 
 	\item Optimized AWS cloudfront infrastructure to increase resiliency through cloudfront origin failover
@@ -91,8 +92,8 @@
 {Capital One}
 {Toronto, ON}
 {\begin{itemize}[nolistsep]
-	\item Upgraded RESTful API from Spring 4 to Spring Boot 2, improving code maintainablility and security
-	\item Added performance increasing modifications to object pooling for encryption/decryption classes
+	\item Upgraded REST API from Spring 4 to Spring Boot 2, improving maintainability and reducing vulnerabilities by 50\%
+	\item Added performance tweaks to object pooling for encryption/decryption classes, decreasing response time by 20\%
 	\item Created unit and integration tests using Wiremock, H2 DB, and Mockito, getting 100\% code coverage
 \end{itemize}}
 \DatedEntry{Front End Developer Intern}
