@@ -25,12 +25,18 @@
 		#1 \\
 	\small{#2}
 \end{center}}
+
 \newcommand{\SplitEntry}[2]{\textbf{\textit{#1}} & \small{#2}\\}
+
 \newcommand{\NewPart}[1]{\section*{\large\uppercase{\textbf{#1}}}}
-\newcommand{\DatedEntry}[5]{\small\textbf{#1}
-	\hfill \small{#2}\\
-	\textit{#3}\hfill\textit{#4}\\\vspace{0.1cm}
-	#5\vspace{0.1cm}
+
+\newcommand{\JobEntry}[3]{
+	\normalsize\textbf{#1}\hfill\normalsize{#2}\\
+	#3\vspace{0.1cm}
+}
+\newcommand{\DatedEntry}[3]{
+	\small\textit{#1}\hfill\small{#2}\\
+	\vspace{0.1cm}#3\vspace{0.1cm}
 }
 \newcommand{\ProjectEntry}[4]{\textbf{#1}
 	\hfill \small{#2}\\
@@ -47,64 +53,72 @@
 \begin{tabular}{r|l}
 	\SplitEntry{Languages}{Typescript/Javascript, Java, Python, Bash, Golang, SQL}
 	\SplitEntry{Frameworks}{Serverless, Svelte, Spring Boot, Micronaut, React/Redux, VueJS/Vuex}
-	\SplitEntry{Tools}{aws, git, docker, maven, nix, Redis}
+	\SplitEntry{Tools}{aws, git, docker, maven, nix, redis}
 \end{tabular}\vspace{-0.2cm}
 
 \NewPart{Work Experience}
-\DatedEntry{Jr Backend Developer}
-{May 2022 -- Present}
-{Deliverr (Acquired by Flexport)}
+\JobEntry{Deliverr (Acquired by Flexport)}
 {Remote}
-{\begin{itemize}[nolistsep]
-	\item Managed invoicing with Chargebee, billing over 100K\texttt{+} events per week from custom billing logic
-	\item Integrated payment gateways like Stripe, Plaid, Braintree servicing 10K\texttt{+} customers, collecting 100M\texttt{+} in revenue
-	\item Created datadog dashboards/alerts to monitor systems, lowering FRT from 1\texttt{+} days to minutes
-	\item Designed lambdas providing new business features handling over 2M events per week
-	\item Shipped code independantly to a serverless ecosystem of typescript lambdas interacting with S3/SQS/Redis/SSM
-	\item Debugged critical systems using different logging tools such as datadog, cloudwatch
-	\item Used IaC tools like Terraform and serverless through CI/CD, achieving easier deployments with better safeguards
-	\item Participated in code reviews, standups, various agile meetings, and other team rituals
-\end{itemize}}
-\DatedEntry{Associate Software Engineer}
-{Jan 2021 -- April 2022}
-{Capital One}
-{Toronto, ON}
-{\begin{itemize}[nolistsep]
-	\item Implemented new content/components for Gatsby React site servicing 75K\texttt{+} unique visitors/week
-	\item Ran A/B tests and tracked data from 5000\texttt{+} experiment interactions per day.
-	\item Wrote cypress, rtl, and enzyme tests while maintaining 100\% code coverage
-	\item Used terraform to manage security groups and IAM roles
-	\item Integrated live API data into site, improving response time of product changes by 30 minutes
-	\item Participated in agile development practices to effectively manage tasks 
-	\item Optimized AWS cloudfront infrastructure to increase resiliency through cloudfront origin failover
-\end{itemize}}
-\DatedEntry{Software Engineer Intern}
-{May 2020 -- Aug 2020}
-{Capital One}
-{Toronto, ON}
-{\begin{itemize}[nolistsep]
-	\item Implemented new user workflows in VueJS/Vuex SPA used by customer agents
-	\item Created new endpoints and business logic in RESTful NodeJS APIs that were consumed by front end
-	\item Performed Accessibility testing on web application, and documented/fixed issues
-\end{itemize}}
-\DatedEntry{Software Engineer Intern}
-{May 2019 -- Aug 2019}
-{Capital One}
-{Toronto, ON}
-{\begin{itemize}[nolistsep]
-	\item Upgraded REST API from Spring 4 to Spring Boot 2, reducing vulnerabilities by 50\%
-	\item Added performance tweaks to object pooling for encryption/decryption, decreasing response time by 20\%
-	\item Created unit and integration tests using Wiremock, H2 DB, and Mockito, getting 100\% code coverage
-\end{itemize}}
-\DatedEntry{Front End Developer Intern}
-{Sept 2018 -- Dec 2018}
-{Ross Video}
-{Ottawa, ON}
-{\begin{itemize}[nolistsep]
-	\item Worked on SaaS webapp servicing major news stations/stadiums in North America
-	\item Implemented new features in Javascript/jQuery application such as video players and login groups
-	\item Added UX improvements for touchpad devices
-\end{itemize}}
+{
+	\DatedEntry{Software Engineer II}
+	{June 2023 -- Present}
+	{
+		\begin{itemize}[nolistsep]
+			\item Designed and shipped new user-facing billing feature providing auto billing for 50K\texttt{+} items that were manually billed
+			\item Helped Build new invoicing flow for billable items interacting with Chargebee as part of integration
+			\item Fixed issues in pricing overview and billing sections of client-facing React frontend
+		\end{itemize}
+	}
+	\DatedEntry{Jr. Backend Developer}
+	{May 2022 -- June 2023}
+	{
+		\begin{itemize}[nolistsep]
+			\item Managed invoicing with Chargebee, billing 100K events per week from custom billing logic
+			\item Integrated payment gateways like Stripe, Plaid, Braintree servicing 10K\texttt{+} customers, collecting 100M\texttt{+} in revenue
+			\item Created datadog dashboards/alerts to monitor systems, lowering FRT from 1\texttt{+} days to minutes
+			\item Designed lambdas providing new business features handling over 2M events per week
+			\item Shipped code independantly to a serverless ecosystem of typescript lambdas interacting with S3/SQS/Redis/SSM
+			\item Debugged critical systems using different logging tools such as datadog, cloudwatch
+			\item Used IaC tools like Terraform and serverless through CI/CD, achieving easier deployments with better safeguards
+			\item Participated in code reviews, standups, agile meetings, and other team rituals
+			\item Helped onboard new team members onto codebase
+		\end{itemize}
+	}
+}
+\JobEntry{Capital One}{Toronto, ON}
+{
+	\DatedEntry{Associate Software Engineer}
+		{Jan 2021 -- April 2022}
+		{
+			\begin{itemize}[nolistsep]
+				\item Implemented new content/components for Gatsby React site servicing 75K\texttt{+} unique visitors/week
+				\item Ran A/B tests and tracked data from 5000\texttt{+} experiment interactions per day.
+				\item Wrote cypress, rtl, and enzyme tests while maintaining 100\% code coverage
+				\item Used terraform to manage security groups and IAM roles
+				\item Integrated live API data into site, improving response time of product changes by 30 minutes
+				\item Participated in agile development practices to effectively manage tasks 
+				\item Optimized AWS cloudfront infrastructure to increase resiliency through cloudfront origin failover
+			\end{itemize}
+	}
+	\DatedEntry{Software Engineer Intern}
+		{May 2020 -- Aug 2020}
+		{
+			\begin{itemize}[nolistsep]
+				\item Implemented new user workflows in VueJS/Vuex SPA used by customer agents
+				\item Created new endpoints and business logic in RESTful NodeJS APIs that were consumed nt end
+				\item Performed Accessibility testing on web application, and documented/fixed issues
+			\end{itemize}
+		}
+	\DatedEntry{Software Engineer Intern}
+		{May 2019 -- Aug 2019}
+		{
+			\begin{itemize}[nolistsep]
+				\item Upgraded Java REST API from Spring 4 to Spring Boot 2, reducing vulnerabilities by 50\%
+				\item Added performance tweaks to object pooling for encryption/decryption, decreasing response time by 20\%
+				\item Created unit and integration tests using Wiremock, H2 DB, and Mockito, getting 100\% code coverage
+			\end{itemize}
+		}
+}
 \vspace{-0.3cm}
 
 \NewPart{Projects}
@@ -121,16 +135,17 @@
 {Golang, Postgres}
 {File server w/ imgur style file name shortening used for self hosting images/files}
 {\begin{itemize}
-	\item Wrote web server that served simple, light HTML website with JWT Authentication
+	\item Wrote web server that served simple, light HTML website with JWT auth
 	\item Added features for account management and private files
 \end{itemize}}\vspace{-0.3cm}
 
 \NewPart{Education}
-\DatedEntry{Carleton University}
-{Sept 2016 -- Dec 2020}
+\JobEntry {Carleton University} {Ottawa, ON}
+{\DatedEntry
 {Bachelors Computer Science, 10.7/12 CGPA (3.8/4.0)}
-{Ottawa, ON}
+{Sept 2016 -- Dec 2020}
 {\begin{itemize}
-	\item TA for Data structures class, mentoring 100\texttt{+} students.
+	\item TA for data structures \& algorithms class, mentoring 100\texttt{+} students.
 \end{itemize}}
+}
 \end{document}
