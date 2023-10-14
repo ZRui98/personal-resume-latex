@@ -64,11 +64,9 @@
 	{June 2023 -- Present}
 	{
 		\begin{itemize}[nolistsep]
-			\item Designed and shipped new user-facing features providing auto billing for 50K\texttt{+} tasks that were manually billed
-			\item Created custom invoicing flow using SQS + Lambdas + Chargebee API to generate invoices
-			\item Fixed issues in pricing and billing overviews of client-facing React frontend
-			\item Designed launch readiness dashboard using Datadog metrics to monitor traffic to new features
-			\item Designed performant queries for MySQL database using knex, on tables with 15M\texttt{+} rows
+			\item Developed a launch readiness dashboard using Datadog metrics to monitor traffic to new features
+			\item Optimized database performance by designing efficient queries using knex on MySQL tables with 15 million\texttt{+} rows
+			\item Designed and implemented new features to automate billing for over 50000 manually billed items, resulting in more accurate billing
 			\item Diagnosed performance issues with MySQL db instances, such as race conditions, deadlocks, timeouts
 			\item Created SQL reports using Metabase and Snowflake to monitor critical business metrics
 			\item Wrote documentation outlining critical flows to business logic and debugging common FAQ's
@@ -79,12 +77,11 @@
 	{
 		\begin{itemize}[nolistsep]
 			\item Managed invoicing with Chargebee, billing 100K events per week from custom billing logic
-			\item Integrated payment systems like Stripe, Plaid, Braintree servicing 10K\texttt{+} customers, collecting 100M\texttt{+} in revenue
+			\item Participated in implementation of new pricing system with rates assignment for 10k\texttt{+} merchants
+			\item Maintained ACH and credit card payments with auth using Plaid with Stripe to service 10K\texttt{+} customers, collecting 100M\texttt{+} in revenue
 			\item Created datadog dashboards/alerts to monitor systems, lowering FRT from 1\texttt{+} days to minutes
-			\item Designed lambdas providing new business features handling over 2M events per week
-			\item Shipped code independantly to a serverless ecosystem of typescript lambdas interacting with S3/SQS/Redis/SSM
-			\item Debugged critical systems using different logging tools such as datadog, cloudwatch
-			\item Integrated IaC tools like Terraform and serverless with CI/CD, achieving easier deployments with better safeguards
+			\item Implemented lambda to send Sendgrid emails to customers when invoices were ready to be paid using Chargebee Webhooks and SQS
+			\item Integrated IaC tools like Terraform and serverless with CircleCI, achieving easier deployments with better safeguards
 			\item Participated in code reviews, standups, agile meetings, and other team rituals
 			\item Helped onboard new team members onto codebase
 		\end{itemize}
@@ -97,7 +94,7 @@
 		{
 			\begin{itemize}[nolistsep]
 				\item Implemented new content/components for Gatsby React site servicing 75K\texttt{+} unique visitors/week
-				\item Ran A/B tests and tracked data from 5000\texttt{+} experiment interactions per day.
+				\item Ran A/B tests and tracked data from 5000\texttt{+} experiment interactions per day
 				\item Wrote cypress, rtl, and enzyme tests while maintaining 100\% code coverage
 				\item Used terraform to manage security groups and IAM roles
 				\item Integrated live API data into site, improving response time of product changes by 30 minutes
@@ -132,8 +129,8 @@
 {Social application for finding buddies to play games with}
 {\begin{itemize}
 	\item Used IGDB API cached in Redis and RediSearch for searching of games
-	\item Implemented features in Spring Boot API and React Front end
-	\item Orchestrated pipeline using drone CI/CD + docker to include deployment + testing
+	\item Build using Spring Boot API and React Front end
+	\item Orchestrated pipeline using droneCI \texttt{+} docker to include deployment + testing
 	\item DB Migrations through flyway
 \end{itemize}}
 \ProjectEntry{fserv}
