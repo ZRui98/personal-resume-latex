@@ -53,10 +53,24 @@
 \begin{tabular}{r|l}
 	\SplitEntry{Languages}{Typescript/Javascript, Java, Python, Bash, Golang, SQL}
 	\SplitEntry{Frameworks}{Serverless, Svelte, Spring Boot, Micronaut, React/Redux, VueJS/Vuex}
-	\SplitEntry{Tools}{aws, git, docker, maven, nix, redis}
+	\SplitEntry{Tools}{aws, git, kubernetes, prometheus, docker, maven, nix, redis}
 \end{tabular}\vspace{-0.2cm}
 
 \NewPart{Work Experience}
+\JobEntry{Pinterest}
+{Remote}
+{
+	\DatedEntry{Software Engineer II}
+	{Feb 2024 -- Present}
+	{
+		\begin{itemize}[nolistsep]
+			\item Contributed to Pinterest's VM management system teletraan written in Java
+			\item Developed Pinterest's CD system for both EC2 and Kubernetes (custom plugins based Spinnaker) serving 60K+ compute resources
+			\item Implemented user friendly UX experience in Spinnaker's Deck UI (React)
+			\item Optimized artifact deployment flow, improving performance by 70\%
+		\end{itemize}
+	}
+}
 \JobEntry{Deliverr (Acquired by Flexport)}
 {Remote}
 {
@@ -65,9 +79,7 @@
 	{
 		\begin{itemize}[nolistsep]
 			\item Developed a launch readiness dashboard using Datadog metrics to monitor traffic to new features
-			\item Optimized database performance by designing efficient queries using knex on MySQL tables with 15 million\texttt{+} rows
-			\item Designed and implemented new features to automate billing for over 50000 manually billed items, resulting in more accurate billing
-			\item Diagnosed performance issues with MySQL db instances, such as race conditions, deadlocks, timeouts
+			\item Optimized database performance by designing efficient queries and fixing deadlocks on MySQL tables with 15 million\texttt{+} rows
 			\item Created SQL reports using Metabase and Snowflake to monitor critical business metrics
 			\item Wrote documentation outlining critical flows to business logic and debugging common FAQ's
 		\end{itemize}
@@ -76,15 +88,11 @@
 	{May 2022 -- June 2023}
 	{
 		\begin{itemize}[nolistsep]
-			\item Managed invoicing with Chargebee, billing 100K events per week from custom billing logic
+			\item Managed invoicing with event driven system around Chargebee, billing 100K events per week from custom billing logic
 			\item Participated in implementation of new pricing system with rates assignment for 10k\texttt{+} merchants
-			\item Maintained ACH and credit card payments with auth using Plaid with Stripe to service 10K\texttt{+} customers, collecting 100M\texttt{+} in revenue
 			\item Created datadog dashboards/alerts to monitor systems, lowering FRT from 1\texttt{+} days to minutes
 			\item Built REST API to generate/retrieve csv reports and excel sheets for customer's pricing data using lambdas and presigned urls from S3
-			\item Implemented lambda to send emails to customers when invoices were ready to be paid using Chargebee Webhooks, SQS, and Sendgrid
 			\item Integrated IaC tools like Terraform and serverless with CircleCI, achieving easier deployments with better safeguards
-			\item Participated in code reviews, standups, agile meetings, and other team rituals
-			\item Helped onboard new team members onto codebase
 		\end{itemize}
 	}
 }
@@ -97,7 +105,6 @@
 				\item Implemented new content/components for Gatsby React site servicing 75K\texttt{+} unique visitors/week
 				\item Ran A/B tests and tracked data from 5000\texttt{+} experiment interactions per day using Optimizely
 				\item Wrote cypress, rtl, and enzyme tests while maintaining 100\% code coverage
-				\item Used terraform to manage security groups and IAM roles
 				\item Integrated live API data into site, improving response time of product changes by 30 minutes
 				\item Participated in agile development practices to effectively manage tasks 
 				\item Optimized AWS cloudfront infrastructure to increase resiliency through cloudfront origin failover
@@ -126,14 +133,15 @@
 
 \NewPart{Projects}
 \ProjectEntry{cyoa}
-{Fastify, Svelte, Cloudflare, SQLite}
+{Fastify, Svelte, Cloudflare, SQLite, k8s}
 {Choose your own Adventure player + creation}
 {\begin{itemize}
 	\item Built UI using sveltkit + pixi.js to render decision graph
 	\item Designed editor using svelte-jsoneditor and custom logic to simplify adventure creation
 	\item Implemented storing audio and image files to show during adventure
 	\item Social auth login (Google Auth) with stateless sessions
-	\item Deployed to Cloudflare R2 \texttt{+} Pages \texttt{+} PM2 with Github Actions
+	\item Deployed to Cloudflare R2 \texttt{+} Pages \texttt{+} and kubernetes
+	\item Full CI/CD stack using fluxCD/github actions with monitoring (victoriametrics)
 \end{itemize}}
 \ProjectEntry{fserv}
 {Golang, Postgres}
