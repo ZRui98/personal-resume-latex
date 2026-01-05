@@ -51,9 +51,9 @@
 
 \NewPart{Skills}
 \begin{tabular}{r|l}
-	\SplitEntry{Languages}{Typescript/Javascript, Java, Python, Bash, Golang, SQL}
-	\SplitEntry{Frameworks}{Serverless, Svelte, Spring Boot, Micronaut, React/Redux, VueJS/Vuex}
-	\SplitEntry{Tools}{aws, git, kubernetes, prometheus, docker, maven, nix, redis}
+	\SplitEntry{Languages}{Typescript/Javascript, Java, Kotlin, Python, SQL, Bash, Golang}
+	\SplitEntry{Frameworks}{Spring Boot, React/Redux, Serverless, Svelte, Dropwizard, VueJS/Vuex, JQuery}
+	\SplitEntry{Tools}{aws, git, docker, Spinnaker, maven, kubernetes, prometheus, Datadog, nix, redis}
 \end{tabular}\vspace{-0.2cm}
 
 \NewPart{Work Experience}
@@ -64,8 +64,13 @@
 	{Feb 2024 -- Present}
 	{
 		\begin{itemize}[nolistsep]
-			\item Contributed to Pinterest's VM/EC2 management system teletraan written in Java
-			\item Developed new features for Pinterest's CD system based on Spinnaker for both EC2 and Kubernetes
+			\item Implemented Multi-account support for 5\texttt{+} new accounts on internal tool used to deploy code to AWS EC2 instances
+			\item Designed and built features in Spinnaker CD like Kubernetes deploys, Buildkite CI, and timed rollbacks, increasing adoption by 10\%
+			\item Decreased cpu/memory resource usage by 30\% by optimizing how internal deployment logic works for Spinnaker pipelines
+			\item Improved performance of some MySQL queries by up to 20\% by removing nested joins and adding indices on commonly used query fields
+			\item Updated GraphQL endpoints and React UI to introduce new types to Spinnaker enums
+			\item Designed shadow deployment flow for kubernetes migrations, which was critical to migrating 50\texttt{+} services to onboard onto kubernetes
+			\item Mentored new teammates by onboarding them onto codebase, and improved internal tooling by adding hot reloading for PF4J plugins
 		\end{itemize}
 	}
 }
@@ -73,7 +78,7 @@
 {Remote}
 {
 	\DatedEntry{Software Engineer II}
-	{Feb 2024 -- Present}
+	{June 2023 -- Nov 2023}
 	{
 		\begin{itemize}[nolistsep]
 			\item Developed a launch readiness dashboard using Datadog metrics to monitor traffic to new features
@@ -88,9 +93,9 @@
 		\begin{itemize}[nolistsep]
 			\item Managed invoicing with event driven system around Chargebee, billing 100K events per week from custom billing logic
 			\item Participated in implementation of new pricing system with rates assignment for 10k\texttt{+} merchants
-			\item Created datadog dashboards/alerts to monitor systems, lowering FRT from 1\texttt{+} days to minutes
+			\item Created Datadog dashboards/alerts to monitor systems, lowering FRT from 1\texttt{+} days to minutes
 			\item Built REST API to generate/retrieve csv reports and excel sheets for customer's pricing data using lambdas and presigned urls from S3
-			\item Integrated IaC tools like Terraform and serverless with CircleCI, achieving easier deployments with better safeguards
+			\item Integrated IaC tools like Terraform and Serverless with CircleCI, achieving easier deployments with better safeguards
 		\end{itemize}
 	}
 }
@@ -102,9 +107,8 @@
 			\begin{itemize}[nolistsep]
 				\item Implemented new content/components for Gatsby React site servicing 75K\texttt{+} unique visitors/week
 				\item Ran A/B tests and tracked data from 5000\texttt{+} experiment interactions per day using Optimizely
-				\item Wrote cypress, rtl, and enzyme tests while maintaining 100\% code coverage
+				\item Wrote cypress, rtl, and enzyme tests while maintaining 90\% code coverage
 				\item Integrated live API data into site, improving response time of product changes by 30 minutes
-				\item Participated in agile development practices to effectively manage tasks 
 				\item Optimized AWS cloudfront infrastructure to increase resiliency through cloudfront origin failover
 			\end{itemize}
 	}
@@ -135,11 +139,8 @@
 {Choose your own Adventure player + creation}
 {\begin{itemize}
 	\item Built UI using sveltkit + pixi.js to render decision graph
-	\item Designed editor using svelte-jsoneditor and custom logic to simplify adventure creation
-	\item Implemented storing audio and image files to show during adventure
 	\item Social auth login (Google Auth) with stateless sessions
-	\item Deployed to Cloudflare R2 \texttt{+} Pages \texttt{+} and kubernetes
-	\item Full CI/CD stack using fluxCD/github actions with monitoring (victoriametrics)
+	\item Deployed to Cloudflare R2 \texttt{+} Pages \texttt{+} and kubernetes, using full CI/CD stack using fluxCD/github actions
 \end{itemize}}
 \ProjectEntry{fserv}
 {Golang, Postgres}
