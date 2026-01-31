@@ -53,7 +53,7 @@
 \begin{tabular}{r|l}
 	\SplitEntry{Languages}{Typescript/Javascript, Java, Kotlin, Python, SQL, Bash, Golang}
 	\SplitEntry{Frameworks}{Spring Boot, React/Redux, Serverless, Svelte, Dropwizard, VueJS/Vuex, JQuery}
-	\SplitEntry{Tools}{aws, git, docker, Spinnaker, maven, kubernetes, prometheus, Datadog, nix, redis}
+	\SplitEntry{Tools}{aws, git, docker, Spinnaker, Terraform, maven, kubernetes, prometheus, Datadog, nix, redis}
 \end{tabular}\vspace{-0.2cm}
 
 \NewPart{Work Experience}
@@ -65,11 +65,12 @@
 	{
 		\begin{itemize}[nolistsep]
 			\item Implemented Multi-account support for 5\texttt{+} new accounts on internal service used to deploy code to AWS EC2 instances
+			\item Added developer flow for dev builds, which sped up development speed by 300\%
 			\item Designed and built features in Spinnaker CD like Kubernetes deploys, Buildkite CI, and timed rollbacks, increasing adoption by 15\texttt{+}\%
 			\item Decreased cpu/memory resource usage by 30\% by optimizing how internal deployment logic works for Spinnaker pipelines
 			\item Improved performance of some MySQL queries by up to 20\% by optimizing queries
-			\item Updated GraphQL endpoints and React UI to implement UI features for clearer progress of deployment.
-			\item Designed deployment flow for kubernetes migrations, which was critical to migrating 50\texttt{+} services to onboard onto kubernetes
+			\item Improved visibility of deploying and pinned versions in GraphQL backend and React UI
+			\item Designed deployment flow for kubernetes migrations from EC2, which was critical to migrating 50\texttt{+} services to onboard onto kubernetes
 			\item Formally mentored new teammates by onboarding them onto kotlin/java/python codebases
 			\item Improved internal tooling by adding live reloading for PF4J plugins
 		\end{itemize}
@@ -85,7 +86,6 @@
 			\item Developed a launch readiness dashboard using Datadog metrics to monitor traffic to new features
 			\item Optimized database performance by designing efficient queries and fixing deadlocks on MySQL tables with 15 million\texttt{+} rows
 			\item Created SQL reports using Metabase and Snowflake to monitor critical business metrics
-			\item Wrote documentation outlining critical flows to business logic and debugging common FAQ's
 		\end{itemize}
 	}
 	\DatedEntry{Jr. Backend Developer}
